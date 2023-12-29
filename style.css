@@ -1,0 +1,124 @@
+
+:root{
+    --clr-neutral-900: hsl(234, 12%, 34%);
+    --clr-neutral-400: hsl(229, 6%, 66%);
+    --clr-neutral-100: hsl(0, 0%, 98%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+    
+    --ff-Poppins:'Poppins', sans-serif;
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 600;
+    --fs-400: .75rem;
+    --fs-500:1.25rem;
+    --fs-600: 1.625rem;
+    --fs-900:2.5rem;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+html{
+    font-family: var(--ff-Poppins);
+    font-weight: var(--fw-normal);
+    line-height: 1.5;
+    color: var(--clr-neutral-400);
+}
+
+h1,
+h2,
+h3{
+    line-height: 1.1;
+    color: var(--clr-neutral-900);
+}
+
+body{
+    margin:0;
+    padding: 0;
+    min-height: 100vh;
+}
+img, picture{
+    max-width: 100%;
+    display: block;
+
+}
+header{
+    text-align: center;
+    margin-block-end: 4rem;
+    margin-block-start: 4rem;
+}
+header > p{
+    font-size: var(--fs-500);
+}
+header > h1{
+    font-weight: var(--fw-light);
+}
+span{
+    font-weight: var(--fw-bold);
+}
+.wrapper{
+    max-width: 1050px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+.wrapper--narrow{
+    max-width: 680px;
+}
+.layout-grid{
+    --gap: 2rem;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+
+@media (max-width: 375px){
+    .layout-grid{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.layout-grid > *{
+    flex: 1;
+}
+.col{
+    display: grid;
+    gap: var(--gap);
+    
+}
+.card{
+    --br: .325rem;
+    padding: 1.5rem;
+    border-radius: var(--br);
+    box-shadow: 0 1rem 1rem -0.5rem rgba(0 50 150 / 0.2);
+    border-top: var(--br) solid;
+}
+.card__img{
+    margin-top: 2rem;
+    margin-left: auto;
+}
+
+.border-cyan{
+    border-top-color: var(--clr-cyan);
+}
+.border-red{
+    border-top-color: var(--clr-red);
+}
+.border-orange{
+    border-top-color: var(--clr-orange);
+}
+.border-blue{
+    border-top-color: var(--clr-blue);
+}
+
+.card__title{
+    font-size: var(--fs-500);
+    margin: 0;
+}
+.card > p{
+    font-size: var(--fs-400);
+}
